@@ -1,3 +1,64 @@
- nav{
-    background-color: rgb(226, 43, 180);
+/* contact*/
+.contactForm{
+   width: 300px;
+   height: auto;
+   margin: 35px 350px;
+}
+.colorBody{
+    background-color: rgb(21, 20, 22);
  }
+ /*nav*/
+ .navigation{
+    background-color: rgb(226, 43, 180);
+    height: 70px;
+    padding-top: 10px;
+    font-size: 20px;
+ }
+ .logo{
+    width: 80px;
+   
+ }
+ /* card*/
+ .cont{
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+ }
+ .contCard{
+    margin: 10px 0;
+ }
+ /*details*/
+ .contDatails{
+    display: block;
+    margin: 50px 350px;
+ }
+ .cont2{
+   margin: 20px 0;
+ }
+ 
+ /*carousel*/
+ .carousel1{
+    height: 100px;
+    padding-top: 40px;
+    background-image: url(/img/banner.jpg);
+ }
+ /*Checks y Browser*/
+ .checks{
+    margin: 15px 0;
+ }
+/*stats*/
+.statsTable{
+   width: 65% !important;
+   height: 20% !important;
+   margin: 35px 200px !important; 
+   border-radius: 1%;
+   border: 1px solid black;
+   
+}
+.statstrthtd{
+   border: 1px solid rgba(245, 245, 245, 0.973); 
+}
+.colorTable{
+   background-color: rgb(77, 35, 38);
+}

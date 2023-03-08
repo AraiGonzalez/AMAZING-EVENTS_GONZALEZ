@@ -10,11 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body class="colorBody">
+
     <!-------- Nav -------->
     <header>
       <nav class="navbar navbar-expand-lg navigation">
       <div class="container-fluid">
-       <img src="/img/Logo Amazing Events.png" class="logo" alt="">
+       <img src="/img/LogoAmazingEvents.png" class="logo" alt="">
       <div class="d-flex">
         <ul class="nav justify-content-end ">
             <li class="nav-item">
@@ -71,34 +72,34 @@
     <!----------- Fin Carousel ---------->
 
      <!--------- Checks y Browser ------------>
-     <div class="d-flex justify-content-evenly checks">
+     <div class="d-flex justify-content-evenly checks flex-wrap">
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label text-light" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="Category" id="Category1">
+        <label class="form-check-label text-light" for="Category1">
           Category 1
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label text-light" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="Category" id="Category2">
+        <label class="form-check-label text-light" for="Category2">
           Category 2
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label text-light" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="Category" id="Category3">
+        <label class="form-check-label text-light" for="Category3">
           Category 3
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label text-light" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="Category" id="Category4">
+        <label class="form-check-label text-light" for="Category4">
           Category 4
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label text-light" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="Category" id="Category5">
+        <label class="form-check-label text-light" for="Category5">
           Category 5
         </label>
       </div>
@@ -110,56 +111,7 @@
       <!----- Fin Checks y Browser -------->
 
       <!------------ Cards ----------->
-      <div class="cont justify-content-evenly">
-        <div class="card contCard" style="width: 18rem;">
-            <img src="img/Cinema.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"> CINEMA</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p>Price:$0000</p>
-              <a href="/details.html#cinema" class="btn btn-primary"> Datails</a>
-            </div>
-          </div>
-
-          <div class="card contCard" style="width: 18rem;">
-            <img src="img/Costume_Party.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">COSTUME PARTY</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p>Price:$0000</p>
-              <a href="/details.html#costume" class="btn btn-primary">Datails</a>
-            </div>
-          </div>
-
-          <div class="card contCard" style="width: 18rem;">
-            <img src="img/Food_Fair.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">FOOD FAIR</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p>Price:$0000</p>
-              <a href="/details.html#food" class="btn btn-primary">Datails</a>
-            </div>
-          </div>
-
-          <div class="card contCard" style="width: 18rem;">
-            <img src="img/Marathon.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">MARATHON</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p>Price:$0000</p>
-              <a href="/details.html#marathon" class="btn btn-primary">Datails</a>
-            </div>
-          </div>
-          <div class="card contCard" style="width: 18rem;">
-            <img src="img/Museum_Tour.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Museum_Tour</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p>Price:$0000</p>
-              <a href="/details.html#museum" class="btn btn-primary">Datails</a>
-            </div>
-          </div>
-    </div>
+      <div id="elemento" class="cont justify-content-evenly"></div>
     <!----------- Fin Cards ---------->
 
 
@@ -192,5 +144,7 @@
         
       </svg>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>    
+    <script src="/javaScript/data.js"></script>
+    <script src="/javaScript/past_events.js"></script>
 </body>
 </html>

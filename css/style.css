@@ -2,7 +2,7 @@
 .contactForm{
    width: 300px;
    height: auto;
-   margin: 35px 350px;
+   margin: 35px auto;
 }
 .colorBody{
     background-color: rgb(21, 20, 22);
@@ -10,7 +10,7 @@
  /*nav*/
  .navigation{
     background-color: rgb(226, 43, 180);
-    height: 70px;
+    height: auto;
     padding-top: 10px;
     font-size: 20px;
  }

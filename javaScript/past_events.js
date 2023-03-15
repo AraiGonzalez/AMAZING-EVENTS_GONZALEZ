@@ -1,9 +1,15 @@
+//constantes
 const contenedorCards = document.getElementById('pastEvents')
+const contenedorchecks= document.getElementById('checkPast')
+const input = document.querySelector('input')
 
-showCards(data.events,contenedorCards)
+//llamar funciones
+crearCheckboxes(data.events,contenedorchecks)
+showCardsPast(data.events)
 
 
-function showCards(arrayDatos,contenedor){
+//Funciones
+function showCardsPast(arrayDatos){
   let cards = ''
   let currentDate = data.currentDate
   for(datas of arrayDatos){
@@ -20,30 +26,17 @@ function showCards(arrayDatos,contenedor){
   </div>`
      } ;
   }
-  contenedor.innerHTML = cards
+  contenedorCards.innerHTML = cards
   
 }
 
-const contenedorCategories = document.getElementById('categories')
+//Eventos
+input.addEventListener('input',()=>{
+  let arrayFiltrado1=filtrarPorTexto(data.events,input.value)
+  showCardsPast(arrayFiltrado1)
+})
+contenedorchecks.addEventListener('change',()=>{
+  let arrayFiltradoa = filtrarCategories(data.events)
+  showCardsPast(arrayFiltradoa)
+})
 
-showCategories(data.events,contenedorCategories)
-
-function showCategories(arrayDatos,contenedor){
-  let categories = ''
-  let nameCategory = ''
-  let numberCategory = 0
-  for(datas of arrayDatos){
-    if (nameCategory != datas.category){
-      nameCategory = datas.category
-      numberCategory += 1
-    categories += `<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="Category" id="Category${numberCategory}}">
-    <label class="form-check-label text-light" for="Category${numberCategory}">
-      ${datas.category}
-    </label>
-  </div>`
-  }
-}
-  contenedor.innerHTML = categories
-  
-}

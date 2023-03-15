@@ -1,8 +1,18 @@
+//Constantes
 const contenedorCards = document.getElementById('events')
+const input = document.querySelector('input')
+const contenedorchecks= document.getElementById('checkConteiner')
 
-showCards(data.events,contenedorCards)
+//Llamar funciones
+crearCheckboxes(data.events,contenedorchecks)
+showCards(data.events)
 
-function showCards(arrayDatos,contenedor){
+//Funciones
+function showCards(arrayDatos){
+  if(arrayDatos.length == 0){
+    contenedorCards.innerHTML = "<h5 class='mensagge'>No hay coincidencias!</h5>"
+    return
+}
   let cards = ''
   for(datas of arrayDatos){
     cards += `<div class="card contCard" style="width: 18rem;">
@@ -15,30 +25,18 @@ function showCards(arrayDatos,contenedor){
     </div>
   </div>`
   }
-  contenedor.innerHTML = cards
+  contenedorCards.innerHTML = cards
   
 }
 
-const contenedorCategories = document.getElementById('categories')
 
-showCategories(data.events,contenedorCategories)
-
-function showCategories(arrayDatos,contenedor){
-  let categories = ''
-  let nameCategory = ''
-  let numberCategory = 0
-  for(datas of arrayDatos){
-    if (nameCategory != datas.category){
-      nameCategory = datas.category
-      numberCategory += 1
-    categories += `<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="Category" id="Category${numberCategory}}">
-    <label class="form-check-label text-light" for="Category${numberCategory}">
-      ${datas.category}
-    </label>
-  </div>`
-  }
-}
-  contenedor.innerHTML = categories
+//Eventos
+input.addEventListener('input',()=>{
+  let arrayFiltrado1=superFiltro(data.events, input.value)
+  showCards(arrayFiltrado1)
+})
+contenedorchecks.addEventListener('change',()=>{
+  let arrayFiltradoa = superFiltro(data.events, input.value)
+  showCards(arrayFiltradoa)
+})
   
-}

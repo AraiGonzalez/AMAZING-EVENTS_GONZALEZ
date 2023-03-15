@@ -32,6 +32,12 @@
  .contCard{
     margin: 10px 0;
  }
+ .mensagge{
+   text-align: center;
+   margin: auto;
+   color: brown;
+   width: 100%;
+ }
  /*details*/
  .contDatails{
     display: block;
@@ -56,6 +62,7 @@
    float: right;
    margin-right: 25px;
  }
+
 /*stats*/
 .statsTable{
    width: 65% !important;

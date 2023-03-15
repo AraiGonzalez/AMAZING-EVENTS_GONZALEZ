@@ -1,9 +1,11 @@
 const contenedorCards = document.getElementById('upcomingEvents')
+const contenedorchecks= document.getElementById('checkUpcoming')
+const input = document.querySelector('input')
+crearCheckboxes(data.events,contenedorchecks)
 
-showCards(data.events,contenedorCards)
+showCardsUpcoming(data.events,contenedorCards)
 
-
-function showCards(arrayDatos,contenedor){
+function showCardsUpcoming(arrayDatos){
   let cards = ''
   let currentDate = data.currentDate
   for(datas of arrayDatos){
@@ -20,29 +22,15 @@ function showCards(arrayDatos,contenedor){
   </div>`
      } ;
   }
-  contenedor.innerHTML = cards
+  contenedorCards.innerHTML = cards
   
 }
-const contenedorCategories = document.getElementById('categories')
-
-showCategories(data.events,contenedorCategories)
-
-function showCategories(arrayDatos,contenedor){
-  let categories = ''
-  let nameCategory = ''
-  let numberCategory = 0
-  for(datas of arrayDatos){
-    if (nameCategory != datas.category){
-      nameCategory = datas.category
-      numberCategory += 1
-    categories += `<div class="form-check">
-    <input class="form-check-input" type="checkbox" name="Category" id="Category${numberCategory}}">
-    <label class="form-check-label text-light" for="Category${numberCategory}">
-      ${datas.category}
-    </label>
-  </div>`
-  }
-}
-  contenedor.innerHTML = categories
-  
-}
+//Eventos
+input.addEventListener('input',()=>{
+  let arrayFiltrado1=filtrarPorTexto(data.events,input.value)
+  showCardsUpcoming(arrayFiltrado1)
+})
+contenedorchecks.addEventListener('change',()=>{
+  let arrayFiltradoa = filtrarCategories(data.events)
+  showCardsUpcoming(arrayFiltradoa)
+})

@@ -1,0 +1,80 @@
+/* contact*/
+.contactForm{
+   width: 300px;
+   height: auto;
+   margin: 35px auto;
+}
+.colorBody{
+    background-color: rgb(21, 20, 22);
+ }
+ /*nav*/
+ .barra{
+   background-color: rgb(226, 43, 180);
+ }
+ .navigation{
+    background-color: rgb(226, 43, 180);
+    height: auto;
+    padding-top: 10px;
+    font-size: 20px;
+ }
+ .logo{
+    height: 60px;
+    background-color: rgb(226, 43, 180);
+   
+ }
+ /* card*/
+ .cont{
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+ }
+ .contCard{
+    margin: 10px 0;
+ }
+ .mensagge{
+   text-align: center;
+   margin: auto;
+   color: brown;
+   width: 100%;
+ }
+ /*details*/
+ .contDatails{
+    display: block;
+    margin: 50px 350px;
+ }
+ .cont2{
+   margin: 20px 0;
+ }
+ 
+ /*carousel*/
+ .carousel1{
+    height: 100px;
+    padding-top: 40px;
+    background-image: url(/img/banner.jpg);
+ }
+ /*Checks y Browser*/
+ .checks{
+    margin: 15px 0;
+ }
+ .search{
+   width: 300px;
+   float: right;
+   margin-right: 25px;
+ }
+
+/*stats*/
+.statsTable{
+   width: 65% !important;
+   height: 20% !important;
+   margin: 35px auto !important; 
+   border-radius: 1%;
+   border: 1px solid black;
+   
+}
+.statstrthtd{
+   border: 1px solid rgba(245, 245, 245, 0.973); 
+}
+.colorTable{
+   background-color: rgb(77, 35, 38);
+}

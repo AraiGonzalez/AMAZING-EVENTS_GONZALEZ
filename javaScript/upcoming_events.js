@@ -1,37 +1,43 @@
-const contenedorCards = document.getElementById('upcomingEvents')
-const contenedorchecks= document.getElementById('checkUpcoming')
-const input = document.querySelector('input')
-crearCheckboxes(data.events,contenedorchecks)
+async function obtenerEventos() {
+  try {
+    const respuesta = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
+    let data
+    if (respuesta.status == 200) {
+      data = await respuesta.json()
+    }
+    ///else {
+    //  data = JSON.parse(amazing.json)
+    // }
+    let currentDate = data.currentDate
+    console.log(data);
 
-showCards(data.events,contenedorCards)
+    //llamo a las funciones
+    crearCheckboxes(data.events, contenedorchecks)
 
-function showCards(arrayDatos){
-  let cards = ''
-  let currentDate = data.currentDate
-  for(datas of arrayDatos){
-   
-    if (currentDate<datas.date){
-    cards += `<div class="card contCard" style="width: 18rem;">
-    <img src="${datas.image}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title"> ${datas.name}</h5>
-      <p class="card-text">${datas.description}</p>
-      <p>$ ${datas.price}</p>
-      <a href="./details.html?id=${datas._id}" class="btn btn-primary"> Details</a>
-    </div>
-  </div>`
-     } ;
+    const arrayFilter = data.events.filter (event => event.date > currentDate)
+    console.log(arrayFilter)
+    showCards(arrayFilter)
+    //Eventos
+    input.addEventListener('input', () => {
+    superFiltro(arrayFilter, input.value)
+
+    })
+    contenedorchecks.addEventListener('change', () => {
+     superFiltro(arrayFilter, input.value)
+
+    })
+
   }
-  contenedorCards.innerHTML = cards
-  
+  catch (error) {
+    console.log(error);
+    alert('Error')
+  }
 }
-//Eventos
-input.addEventListener('input',()=>{
-  let arrayFiltrado1=superFiltro(data.events, input.value)
-  showCards(arrayFiltrado1)
-})
-contenedorchecks.addEventListener('change',()=>{
-  let arrayFiltradoa = superFiltro(data.events, input.value)
-  showCards(arrayFiltradoa)
-})
-  
+obtenerEventos()
+//constantes
+const contenedorCards = document.getElementById('upcomingEvents')
+const contenedorchecks = document.getElementById('checkUpcoming')
+const input = document.querySelector('input')
+
+
+

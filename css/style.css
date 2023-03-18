@@ -30,7 +30,7 @@
     
  }
  .contCard{
-    margin: 10px 0;
+    margin: 10px;
  }
  .mensagge{
    text-align: center;
@@ -76,5 +76,5 @@
    border: 1px solid rgba(245, 245, 245, 0.973); 
 }
 .colorTable{
-   background-color: rgb(77, 35, 38);
+   background-color: rgb(203, 159, 162);
 }

@@ -1,3 +1,5 @@
+
+
 ////FuncionesGenera
 function crearCheckboxes(arrayDatos,contenedor){
   let checks = ''

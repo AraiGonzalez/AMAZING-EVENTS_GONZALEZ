@@ -1,6 +1,4 @@
-
-
-////FuncionesGenera
+////FuncionesGenerales
 function crearCheckboxes(arrayDatos,contenedor){
   let checks = ''
     let categoriesRepetidas = arrayDatos.map(elemento => elemento.category)
@@ -23,7 +21,8 @@ function crearCheckboxes(arrayDatos,contenedor){
     contenedor.innerHTML = checks
   }
 
-  function filtrarPorTexto(arrayDatos, texto){
+ function filtrarPorTexto(arrayDatos, texto){
+ 
     let arrayFiltrado = arrayDatos.filter(elemento => elemento.name.toLowerCase().includes(texto.toLowerCase()))
     return arrayFiltrado
 }
@@ -42,7 +41,31 @@ function filtrarCategories(arrayDatos){
   return arrayFiltrado
 }
 function superFiltro(arrayDatos, value){
+  
   let arrayFiltrado1 = filtrarPorTexto(arrayDatos, value)
   let arrayFiltrado2 = filtrarCategories(arrayFiltrado1)
+  console.log("s2do filtro")
+  console.log(arrayFiltrado2)
   showCards(arrayFiltrado2)
+
+}
+function showCards(arrayDatos) {
+  if (arrayDatos.length == 0) {
+    contenedorCards.innerHTML = "<h5 class='mensagge'>No hay coincidencias!</h5>"
+    return
+  }
+  let cards = ''
+  for (datas of arrayDatos) {
+    cards += `<div class="card contCard" style="width: 18rem;">
+    <img src="${datas.image}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> ${datas.name}</h5>
+      <p class="card-text">${datas.description}</p>
+      <p>$ ${datas.price}</p>
+      <a href="./details.html?id=${datas._id}" class="btn btn-primary"> Details</a>
+    </div>
+  </div>`
+  }
+  contenedorCards.innerHTML = cards
+
 }

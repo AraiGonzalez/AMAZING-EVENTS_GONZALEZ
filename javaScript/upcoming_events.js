@@ -6,22 +6,27 @@ async function obtenerEventos() {
       data = await respuesta.json()
     }
     ///else {
-   //  data = JSON.parse(amazing.json)
-   // }
-    console.log(data.events);
+    //  data = JSON.parse(amazing.json)
+    // }
+    let currentDate = data.currentDate
+    console.log(data);
 
     //llamo a las funciones
     crearCheckboxes(data.events, contenedorchecks)
-    showCards(data.events)
+
+    const arrayFilter = data.events.filter (event => event.date > currentDate)
+    console.log(arrayFilter)
+    showCards(arrayFilter)
     //Eventos
     input.addEventListener('input', () => {
-      let arrayFiltrado1 = superFiltro(data.events, input.value)
-      showCards(arrayFiltrado1)
+    superFiltro(arrayFilter, input.value)
+
     })
     contenedorchecks.addEventListener('change', () => {
-      let arrayFiltradoa = superFiltro(data.events, input.value)
-      showCards(arrayFiltradoa)
+     superFiltro(arrayFilter, input.value)
+
     })
+
   }
   catch (error) {
     console.log(error);
@@ -31,37 +36,8 @@ async function obtenerEventos() {
 obtenerEventos()
 //constantes
 const contenedorCards = document.getElementById('upcomingEvents')
-const contenedorchecks= document.getElementById('checkUpcoming')
+const contenedorchecks = document.getElementById('checkUpcoming')
 const input = document.querySelector('input')
 
 
-function showCards(arrayDatos){
-  let cards = ''
-  let currentDate = data.currentDate
-  for(datas of arrayDatos){
-   
-    if (currentDate<datas.date){
-    cards += `<div class="card contCard" style="width: 18rem;">
-    <img src="${datas.image}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title"> ${datas.name}</h5>
-      <p class="card-text">${datas.description}</p>
-      <p>$ ${datas.price}</p>
-      <a href="./details.html?id=${datas._id}" class="btn btn-primary"> Details</a>
-    </div>
-  </div>`
-     } ;
-  }
-  contenedorCards.innerHTML = cards
-  
-}
-//Eventos
-input.addEventListener('input',()=>{
-  let arrayFiltrado1=superFiltro(data.events, input.value)
-  showCards(arrayFiltrado1)
-})
-contenedorchecks.addEventListener('change',()=>{
-  let arrayFiltradoa = superFiltro(data.events, input.value)
-  showCards(arrayFiltradoa)
-})
-  
+

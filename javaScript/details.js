@@ -1,10 +1,19 @@
-const queryString = document.location.search
-
-const params = new URLSearchParams(queryString)
-
-const id = params.get("id")
-const data1 = data.events.find(cards => cards._id == id)
 const containerCards = document.getElementById("cardsContainerD")
+const queryString = document.location.search
+const params = new URLSearchParams(queryString)
+const id = params.get("id")
+
+let data
+fetch('https://mindhub-xj03.onrender.com/api/amazing')
+.then((res)=>res.json())
+.then((data)=>{
+    console.log(data)
+    mostrarDetails(data)
+})
+.catch((error)=> console.log(error))
+
+function mostrarDetails(arrayDatos){
+const data1 = arrayDatos.events.find(cards => cards._id == id)
 containerCards.innerHTML += ` 
 <div class="card contCard" style="width: 18rem;">
     <img src="${data1.image}" class="card-img-top" alt="">
@@ -19,3 +28,5 @@ containerCards.innerHTML += `
       <p> Price: $${data1.price}</p>
     </div>
   </div> `
+}
+

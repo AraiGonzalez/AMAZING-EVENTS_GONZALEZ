@@ -15,7 +15,7 @@ function crearCheckboxes(arrayDatos,contenedor){
     categories.forEach(numberCategory =>{
     checks += `<div class="form-check">
     <input class="form-check-input" type="checkbox" name="Category" id="${numberCategory}" value="${numberCategory}">
-    <label class="form-check-label text-light" for="${numberCategory}"> ${numberCategory}</label>
+    <label class="form-check-label text-dark" for="${numberCategory}"> ${numberCategory}</label>
   </div>`
     })
     contenedor.innerHTML = checks
@@ -58,11 +58,11 @@ function showCards(arrayDatos) {
   for (datas of arrayDatos) {
     cards += `<div class="card contCard" style="width: 18rem;">
     <img src="${datas.image}" class="card-img-top" alt="...">
-    <div class="card-body">
+    <div class="card-body colorCard">
       <h5 class="card-title"> ${datas.name}</h5>
       <p class="card-text">${datas.description}</p>
       <p>$ ${datas.price}</p>
-      <a href="./details.html?id=${datas._id}" class="btn btn-primary"> Details</a>
+      <a href="./details.html?id=${datas._id}" class="btn btn-dark"> Details</a>
     </div>
   </div>`
   }

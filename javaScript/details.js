@@ -17,7 +17,7 @@ const data1 = arrayDatos.events.find(cards => cards._id == id)
 containerCards.innerHTML += ` 
 <div class="card contCard" style="width: 18rem;">
     <img src="${data1.image}" class="card-img-top" alt="">
-    <div class="card-body">
+    <div class="card-body colorCard">
       <h5 class="card-title">${data1.name}</h5>
       <p class="card-text">Date: ${data1.date} </p>
       <p class="card-text">Description: ${data1.description}</p>

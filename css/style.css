@@ -5,7 +5,7 @@
    margin: 35px auto;
 }
 .colorBody{
-    background-color: rgb(21, 20, 22);
+    background-color: rgb(214, 184, 245);
  }
  /*nav*/
  .barra{
@@ -31,6 +31,9 @@
  }
  .contCard{
     margin: 10px;
+ }
+ .colorCard{
+   background-color: rgb(189, 159, 216);
  }
  .mensagge{
    text-align: center;

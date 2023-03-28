@@ -1,25 +1,20 @@
-/* contact*/
-.contactForm{
-   width: 300px;
-   height: auto;
-   margin: 35px auto;
-}
+
 .colorBody{
     background-color: rgb(214, 184, 245);
  }
  /*nav*/
  .barra{
-   background-color: rgb(226, 43, 180);
+   background-color:  rgb(177, 108, 243);
  }
  .navigation{
-    background-color: rgb(226, 43, 180);
+    background-color: rgb(177, 108, 243);
     height: auto;
     padding-top: 10px;
     font-size: 20px;
  }
  .logo{
     height: 60px;
-    background-color: rgb(226, 43, 180);
+    background-color:rgb(177, 108, 243);
    
  }
  /* card*/
@@ -27,11 +22,12 @@
     display: inline-flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
  }
  .contCard{
     margin: 10px;
+    border-color: rgb(16, 15, 15) !important;  
  }
+
  .colorCard{
    background-color: rgb(189, 159, 216);
  }
@@ -41,30 +37,52 @@
    color: brown;
    width: 100%;
  }
+
+ .imageCard{
+   height: 200px; ;
+ }
  /*details*/
  .contDatails{
     display: block;
-    margin: 50px 350px;
+    margin: 60px 100px;
  }
- .cont2{
-   margin: 20px 0;
+ .imgDetails{
+   margin: 40px 9px;
  }
- 
  /*carousel*/
  .carousel1{
     height: 100px;
     padding-top: 40px;
-    background-image: url(/img/banner.jpg);
+    background-image: url(/img/images\ \(2\).jpg);
+ }
+ .colorC{
+   color: blueviolet;
  }
  /*Checks y Browser*/
  .checks{
     margin: 15px 0;
  }
- .search{
+ .search1{
+   
    width: 300px;
-   float: right;
-   margin-right: 25px;
+   
+   margin-left: auto;
+   margin-right: auto;
+   justify-content: center;
  }
+
+/* contact*/
+.contactForm{
+   margin: 15px;
+}
+.cardContact{
+   background-color:  rgb(189, 159, 216);
+   width: 400px;
+   height: auto;
+   margin: 35px auto;
+   border-radius: 1%;
+   border: 1px solid black;
+   }
 
 /*stats*/
 .statsTable{
@@ -76,8 +94,26 @@
    
 }
 .statstrthtd{
-   border: 1px solid rgba(245, 245, 245, 0.973); 
+   border: 1px solid rgba(6, 6, 6, 0.973); 
 }
 .colorTable{
-   background-color: rgb(203, 159, 162);
+   background-color: rgb(197, 150, 240);
+   border-radius: 1%;
+   border: 1px solid black;
 }
+.colortable2{
+   background-color:  rgb(189, 159, 216);
+   border-radius: 1%;
+   border: 1px solid black;
+}
+.colortable3{
+   background-color:  rgb(97, 44, 144);
+   border-radius: 1%;
+   border: 1px solid black;
+}
+/*footer*/
+.textF{
+   font-weight: 600;
+
+}
+

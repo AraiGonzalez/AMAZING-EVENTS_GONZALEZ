@@ -22,7 +22,7 @@ function crearCheckboxes(arrayDatos,contenedor){
   }
 
  function filtrarPorTexto(arrayDatos, texto){
- 
+    console.log(arrayDatos)
     let arrayFiltrado = arrayDatos.filter(elemento => elemento.name.toLowerCase().includes(texto.toLowerCase()))
     return arrayFiltrado
 }
@@ -37,15 +37,14 @@ function filtrarCategories(arrayDatos){
   }
   let checkValues = checksChecked.map(check => check.value)
   let arrayFiltrado = arrayDatos.filter(elemento => checkValues.includes(elemento.category))
-  console.log(arrayFiltrado)
+
   return arrayFiltrado
 }
 function superFiltro(arrayDatos, value){
   
   let arrayFiltrado1 = filtrarPorTexto(arrayDatos, value)
   let arrayFiltrado2 = filtrarCategories(arrayFiltrado1)
-  console.log("s2do filtro")
-  console.log(arrayFiltrado2)
+
   showCards(arrayFiltrado2)
 
 }
@@ -57,7 +56,7 @@ function showCards(arrayDatos) {
   let cards = ''
   for (datas of arrayDatos) {
     cards += `<div class="card contCard" style="width: 18rem;">
-    <img src="${datas.image}" class="card-img-top" alt="...">
+    <img src="${datas.image}" class="card-img-top imageCard" alt="...">
     <div class="card-body colorCard">
       <h5 class="card-title"> ${datas.name}</h5>
       <p class="card-text">${datas.description}</p>

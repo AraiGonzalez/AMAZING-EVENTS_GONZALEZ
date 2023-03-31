@@ -50,7 +50,7 @@ function superFiltro(arrayDatos, value){
 }
 function showCards(arrayDatos) {
   if (arrayDatos.length == 0) {
-    contenedorCards.innerHTML = "<h5 class='mensagge'>No hay coincidencias!</h5>"
+    contenedorCards.innerHTML = "<h2 class='mensagge'>No matches!</h2>"
     return
   }
   let cards = ''
@@ -60,9 +60,12 @@ function showCards(arrayDatos) {
     <div class="card-body colorCard">
       <h5 class="card-title"> ${datas.name}</h5>
       <p class="card-text">${datas.description}</p>
-      <p>$ ${datas.price}</p>
-      <a href="./details.html?id=${datas._id}" class="btn btn-dark"> Details</a>
+      <p class="alingc">Price: $ ${datas.price}</p>
+      <div class="cardButon">
+       <a href="./details.html?id=${datas._id}" class="btn btn-dark "> Details</a>
+       </div>
     </div>
+   
   </div>`
   }
   contenedorCards.innerHTML = cards

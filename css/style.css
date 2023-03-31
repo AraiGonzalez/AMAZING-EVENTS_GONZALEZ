@@ -22,29 +22,38 @@
     display: inline-flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    width: 100%;
+    
  }
  .contCard{
     margin: 10px;
     border-color: rgb(16, 15, 15) !important;  
+    box-shadow: 7px 7px rgb(70, 69, 71);
  }
 
  .colorCard{
    background-color: rgb(189, 159, 216);
  }
  .mensagge{
-   text-align: center;
-   margin: auto;
-   color: brown;
+   align-items: center;
+   margin: 60px 500px;
+   color: rgb(12, 8, 8);
    width: 100%;
  }
 
  .imageCard{
    height: 200px; ;
  }
+ .cardButon{
+   width: 100%;
+   margin: auto;
+ }
+ 
  /*details*/
  .contDatails{
     display: block;
     margin: 60px 100px;
+    box-shadow: 7px 7px rgb(70, 69, 71);
  }
  .imgDetails{
    margin: 40px 9px;
@@ -75,6 +84,9 @@
 .contactForm{
    margin: 15px;
 }
+.buttonForm{
+margin: 10px 40%;
+}
 .cardContact{
    background-color:  rgb(189, 159, 216);
    width: 400px;
@@ -82,8 +94,11 @@
    margin: 35px auto;
    border-radius: 1%;
    border: 1px solid black;
+   box-shadow: 6px 6px rgb(70, 69, 71);
    }
-
+.alingc{
+   font-weight: 500;
+}
 /*stats*/
 .statsTable{
    width: 65% !important;
@@ -99,17 +114,17 @@
 .colorTable{
    background-color: rgb(197, 150, 240);
    border-radius: 1%;
-   border: 1px solid black;
+   border: 2px solid black;
 }
 .colortable2{
    background-color:  rgb(189, 159, 216);
    border-radius: 1%;
-   border: 1px solid black;
+   border: 2px solid black;
 }
 .colortable3{
    background-color:  rgb(97, 44, 144);
    border-radius: 1%;
-   border: 1px solid black;
+   border: 3px solid black;
 }
 /*footer*/
 .textF{

@@ -16,7 +16,7 @@ fetch('https://mindhub-xj03.onrender.com/api/amazing')
 function mostrarDetails(arrayDatos){
 const data1 = arrayDatos.events.find(cards => cards._id == id)
 containerCards.innerHTML += ` 
-<div class="card mb-3 " style="max-width: 800px;">
+<div class="card mb-3 " style="max-width: 100%;">
   <div class="row g-0">
     <div class="col-md-5 colorCard">
       <img src="${data1.image}" class="img-fluid imgDetails" alt="...">

@@ -1,4 +1,4 @@
-Este proyecto, denominado "Amazing Events", fue desarrollado como parte del curso "Argentina Programa de Desarrollo Frontend".
+-Este proyecto, denominado "Amazing Events", fue desarrollado como parte del curso "Argentina Programa de Desarrollo Frontend".
 Se trata de una página web destinada a la gestión de eventos, donde se exhiben cinco secciones principales:
 
 •Home: Esta sección muestra todos los eventos disponibles, incluyendo tanto los eventos pasados como los eventos futuros.
@@ -13,3 +13,11 @@ Los usuarios pueden utilizar la función de búsqueda para buscar eventos por no
 
 •Table: muestra estadísticas relacionadas con los eventos próximos, como el porcentaje de asistencia, así como también proporciona un ordenamiento por categoría y 
 estadísticas de asistencia de eventos pasados.
+
+-Tecnologías Utilizadas: 
+
+HTML: Utilizado para la estructura y el contenido de la página web.
+
+CSS: Utilizado para el diseño y la presentación visual de la página.
+
+JavaScript: Utilizado para proporcionar funcionalidades interactivas en la página, así como para consumir JSON o una API y asi obtener datos dinámicos

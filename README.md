@@ -1,4 +1,4 @@
--Este proyecto, denominado "Amazing Events", fue desarrollado como parte del curso "Argentina Programa de Desarrollo Frontend".
+-Este proyecto "Amazing Events", fue desarrollado como parte del curso "Argentina Programa de Desarrollo Frontend".
 Se trata de una página web destinada a la gestión de eventos, donde se exhiben cinco secciones principales:
 
 •Home: Esta sección muestra todos los eventos disponibles, incluyendo tanto los eventos pasados como los eventos futuros.

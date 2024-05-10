@@ -20,4 +20,4 @@ HTML: Utilizado para la estructura y el contenido de la página web.
 
 CSS: Utilizado para el diseño y la presentación visual de la página.
 
-JavaScript: Utilizado para proporcionar funcionalidades interactivas en la página, así como para consumir JSON o una API y asi obtener datos dinámicos
+JavaScript: Utilizado para proporcionar funcionalidades interactivas, así como para consumir JSON o una API y asi obtener datos dinámicos
